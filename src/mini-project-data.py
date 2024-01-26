@@ -45,13 +45,11 @@ def orders_menu():
         if user_input == "0":
             main_menu()
         elif user_input == "1":
-            print(orders_dict)
+            orders_list()
         elif user_input == "2":
             create_new_order()
         elif user_input == "3":
             update_order_status = print("Updating existing order status")
-            
-# def orders_list
             
 def create_new_order():
     customers_name = input("Customers name:")
@@ -60,8 +58,9 @@ def create_new_order():
         
 # update_order_status
 # new_product 
+# def update_list
             
-def orders_dict():  
+def orders_list():  
     customer_list = [{
     "customer_name": "Sam",
    "customer_address": "Unit 2, 12 Main Street, LONDON, WH1 2ER",
@@ -95,29 +94,24 @@ def product_menu():
         if user_input == "0":
             main_menu()
         elif user_input == "1":
-            product_list()
+            food = ["1- Fries", "2- Chicken", "3- Wings", "4- Water", "5- Orange Juice", "6- Pie", "7- Patty"]
+            for x in food:
+                print(x)
         elif user_input == "2":
-            new_list = input("\nPlease enter the product you would like to add: ")
-            product_list.append(new_product)
+            new_product = input("\nPlease enter the product you would like to add: ")
+            food.append(new_product)
             print(f"\n{new_product} added successfully!")
         elif user_input == "3":
-            product_list()
+            print(food)
             update_list = int(input)
         else:
             input("Please select valid option: ")
-            
-           
-# def update_list
+                   
 
 def new_product():
     input("Please enter product you would like to add:")
     
 main_menu()
-
-def product_list():
-    product_list = ["1-Fries", "2-Chicken", "3-Wings", "4-Water", "5-Orange Juice", "6-Pie", "Patty"]
-result = "n\".join(product_list)"
-print(product_list)
 
 # if option == 0:
 #     print("Exiting program.")
