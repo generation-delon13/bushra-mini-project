@@ -1,3 +1,4 @@
+# Order in a list of dictionaries
 orders = [{"customer_name": "John",
     "customer_address": "Flat 6, Ilterdon Road, LONDON, N1 2HZ",
    "customer_phone": "0765785634",
@@ -15,7 +16,6 @@ orders = [{"customer_name": "John",
 
 # started my code with a input to allow user interface
 name = input("Hello, what is your name?: ")
-
 # Printing a welcome message with the users input of their name
 print("Hello " +name + ", welcome to Bushra's cafe!")
 print()
@@ -36,9 +36,9 @@ print(contents)
 import csv
 
 with open("products.csv", "r") as file:
-        file = csv.reader(file, delimiter = ",")
-        for row in file:
-            print(row)
+    file = csv.reader(file, delimiter = ",")
+    for row in file:
+        print(row)
 # new_food_list = load_data("products.csv") - append to the list?       
 
 print("Please see the options below:")
@@ -74,9 +74,10 @@ def save_or_exit():
         [1]: Save couriers list to couriers.txt
         [2]: Exit program""")
         
+        
         while True:
-            user_input = input("Please select an option: ")
-            if user_input == "2": 
+            user_input = ("Please select an option: ")
+            if user_input == "2":
                 print("Exiting program.")
                 break
             elif user_input == "1":
@@ -87,6 +88,8 @@ def save_or_exit():
             elif user_input == "0":
                 print("Saving products list to products.txt. ")
                 break
+            else:
+                input("Please select valid option: ")
 
 def orders_menu():
     while True:
@@ -106,7 +109,7 @@ def orders_menu():
             print('Orders Summary:')
             print("")
             for i, order in enumerate(orders, 1):
-                # print(i, order)
+                print(i, order)
                 print(f'Order number {i}')
                 print(f'Customer name: {order['customer_name']}')
                 print(f'Customer address: {order['customer_address']}')
@@ -120,7 +123,7 @@ def orders_menu():
             print("Our orders are:\n")
             for i, order in enumerate(orders):
                 print(f"{i}:{order}")
-            update_index = int(input("\nEnter the index of order you want to update: "))
+            update_index = int(input("\nEnter the number of order you want to update: "))
             for i, status in enumerate(order_status):
                 print(f"{i}:{status}")
             new_order_status = (input("Enter the new status of the order: "))
@@ -148,7 +151,8 @@ def couriers_menu():
         if user_input == "0":
                 main_menu()
         elif user_input == "1": 
-                print(courier_list)
+                courier_list = ["DPD", "Amazon", "Royal mail", "Evri"]
+                print(*courier_list, sep="\n")
         elif user_input == "2":
                 courier_list = ["DPD", "Amazon", "Royal mail", "Evri"]
                 for x in range(1):
@@ -159,7 +163,6 @@ def couriers_menu():
                     print(courier_list)
     else:
         input("Please select valid option: ")
-
 def create_new_courier():
     courier_name = input("Courier name:")
     courier_number = input("Courier number:")
@@ -169,7 +172,8 @@ def create_new_courier():
 #     print("You entered:", user_input)
 # except ValueError:
 #     print("Invalid input. Please enter a valid number.")
-        
+ 
+# Order status list    
 order_status = ["Pending", "Cancelled", "Delivered", "Shipped"]
 
 courier_list = ["DPD", "Amazon", "Royal mail", "Evri"]
@@ -194,14 +198,13 @@ def product_menu():
         if user_input == "0":
                 main_menu()
         elif user_input == "1":
-            food = ['\n' "1- Fries", "2- Chicken", "3- Wings", "4- Water", "5- Orange Juice", "6- Pie", "7- Patty"]
+            food = ["Fries", "Chicken", "Wings", "Water", "Orange Juice", "Pie", "Patty"]
             print(*food, sep="\n")
             break
         elif user_input == "2":
-            food = ['\n' "1- Fries", "2- Chicken", "3- Wings", "4- Water", "5- Orange Juice", "6- Pie", "7- Patty"]
+            food = ["Fries", "Chicken", "Wings", "Water", "Orange Juice", "Pie", "Patty"]
             for x in range(1):
                 food_input = input ("Please enter the product you would like to add: \n")
-                # print(food)
                 print(f"\n{food_input} added successfully !")
                 print("")
                 food.append(food_input)
