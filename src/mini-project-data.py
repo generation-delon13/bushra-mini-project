@@ -184,7 +184,7 @@ def couriers_menu():
         else:
             input("Please select valid option: ")
    
-#  What does this do
+# User input 
 def create_new_courier():
     courier_name = input("Courier name:")
     courier_number = input("Courier number:")
