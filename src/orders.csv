@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 orders = [{"customer_name": "John",
     "customer_address": "Flat 6, Ilterdon Road, LONDON, N1 2HZ",
    "customer_phone": "0765785634",
@@ -22,4 +23,30 @@ for i, order in enumerate(orders):
     print(f'Customer phone: {order['customer_phone']}')
     print(f'Order status: {order['status']}')
 
+=======
+orders = [{"customer_name": "John",
+    "customer_address": "Flat 6, Ilterdon Road, LONDON, N1 2HZ",
+   "customer_phone": "0765785634",
+   "status": "preparing"}, 
+    
+    {"customer_name": "Sam",
+   "customer_address": "Unit 2, 12 Main Street, LONDON, WH1 2ER",
+   "customer_phone": "0765789334",
+    "status": "preparing"}, 
+    
+     {"customer_name": "Bill",
+    "customer_address": "68, Summerland Rd, LONDON, SE14 6FW",
+   "customer_phone": "0785789334",
+    "status": "preparing"}]
+
+print('Orders Summary:')
+for i, order in enumerate(orders):
+    print()
+    print(f'Order number {i}')
+    print(f'Customer name: {order['customer_name']}')
+    print(f'Customer address: {order['customer_address']}')
+    print(f'Customer phone: {order['customer_phone']}')
+    print(f'Order status: {order['status']}')
+
+>>>>>>> 653851aa1fa3150f2c0cdd19af7c418dc1401311
     
