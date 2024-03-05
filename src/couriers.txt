@@ -1,25 +1,11 @@
 Couriers List
 DPD
-Royal mail
-DPD
-Royal mail
-DPD
-Royal mail
-DPD
-Royal mail
-DPD
-Royal mail
-Just eat
+Evri
+Just Eat
 Deliveroo
-Just eat
+Just Eat
 Deliveroo
-Just eat
+Just Eat
 Deliveroo
-Just eat
-Deliveroo
-Just eat
-Deliveroo
-Just eat
-Deliveroo
-Just eat
+Just Eat
 Deliveroo

@@ -16,3 +16,9 @@
 #          elif user_input == 2:
 #               print("Save products")
 #               break
+
+# class menu_list:
+#     def __init__(self):
+        
+def test_can_add_item():
+    pass
